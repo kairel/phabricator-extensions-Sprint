@@ -87,9 +87,9 @@ abstract class SprintProjectController extends SprintController {
   public function buildApplicationMenu() {
     $menu = $this->newApplicationMenu();
 
-    $profile_menu = $this->getProfileMenu();
+    $profile_menu = $this->getProfileMenuEngine();
     if ($profile_menu) {
-      $menu->setProfileMenu($profile_menu);
+      $menu->setProfileMenuEngine($profile_menu);
     }
 
     $menu->setSearchEngine(new PhabricatorProjectSearchEngine());
@@ -97,7 +97,7 @@ abstract class SprintProjectController extends SprintController {
     return $menu;
   }
 
-  protected function getProfileMenu() {
+  protected function getProfileMenuEngine() {
     if (!$this->profileMenu) {
       $project = $this->getProject();
       if ($project) {

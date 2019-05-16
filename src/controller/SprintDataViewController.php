@@ -8,7 +8,7 @@ final class SprintDataViewController extends SprintController {
   private $project;
   private $profileMenu;
 
-  public function getProfileMenu(PhabricatorProject $project) {
+  public function getProfileMenuEngine(PhabricatorProject $project) {
     if (!$this->profileMenu) {
       if ($project) {
         $viewer = $this->getViewer();
@@ -44,7 +44,7 @@ final class SprintDataViewController extends SprintController {
     $can_create = $this->hasApplicationCapability(
         ProjectCreateProjectsCapability::CAPABILITY);
     $crumbs = $this->getCrumbs($can_create);
-    $nav = $this->getProfileMenu($this->project);
+    $nav = $this->getProfileMenuEngine($this->project);
     return $this->newPage()
         ->setNavigation($nav)
         ->setCrumbs($crumbs)

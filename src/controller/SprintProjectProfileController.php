@@ -71,7 +71,7 @@ final class SprintProjectProfileController
       ->setBackground(PHUIBoxView::GREY)
       ->setUserPHIDs($project->getWatcherPHIDs());
 
-    $nav = $this->getProfileMenu();
+    $nav = $this->getProfileMenuEngine();
     $nav->selectFilter(PhabricatorProject::ITEM_PROFILE);
 
     $stories = id(new PhabricatorFeedQuery())

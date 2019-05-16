@@ -107,7 +107,7 @@ abstract class SprintProjectController extends SprintController {
             ->setViewer($viewer)
             ->setProfileObject($project);
 
-        $this->profileMenu = $engine->buildNavigation();
+        $this->profileMenu = $engine->newNavigationView();
       }
     }
 

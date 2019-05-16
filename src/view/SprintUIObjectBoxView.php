@@ -74,7 +74,7 @@ final class SprintUIObjectBoxView extends AphrontView {
           ));
 
         if (!$tab->getHref()) {
-          $tab->setHref('#');
+          $tab->setURI('#');
         }
 
         if (!$tab->getType()) {
@@ -218,7 +218,7 @@ final class SprintUIObjectBoxView extends AphrontView {
         ->addSigil('reveal-content')
         ->setID($hide_action_id)
         ->setStyle($hide_style)
-        ->setHref($this->showHideHref)
+        ->setURI($this->showHideHref)
         ->setMetaData(
           array(
             'hideIDs' => array($hide_action_id),
@@ -230,7 +230,7 @@ final class SprintUIObjectBoxView extends AphrontView {
         ->setTag('a')
         ->addSigil('reveal-content')
         ->setStyle($show_style)
-        ->setHref('#')
+        ->setURI('#')
         ->setID($show_action_id)
         ->setMetaData(
           array(
@@ -268,7 +268,7 @@ final class SprintUIObjectBoxView extends AphrontView {
       $mobile_menu = id(new PHUIButtonView())
         ->setTag('a')
         ->setText(pht('Actions'))
-        ->setHref('#')
+        ->setURI('#')
         ->setIcon($icon)
         ->addClass('phui-mobile-menu')
         ->setID($icon_id)

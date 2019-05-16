@@ -44,7 +44,7 @@ final class PhragileProfilePanel
     );
   }
 
-  protected function newNavigationMenuItems(
+  protected function newMenuItemViewList(
       PhabricatorProfilePanelConfiguration $config) {
 
     $project = $config->getProfileObject();
@@ -57,10 +57,10 @@ final class PhragileProfilePanel
     $name = $this->getDisplayName($config);
     $icon = 'fa-link';
     $phragile_base_uri = PhabricatorEnv::getEnvConfig('sprint.phragile-uri');
-    $href = $phragile_base_uri.$id;
+    $uri = $phragile_base_uri.$id;
 
-    $item = $this->newItem()
-        ->setHref($href)
+    $item = $this->newItemView()
+        ->setURI($uri)
         ->setName($name)
         ->setDisabled(!$has_children)
         ->setIcon($icon);

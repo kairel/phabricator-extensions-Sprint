@@ -87,7 +87,7 @@ abstract class SprintController extends PhabricatorController {
     $crumbs->addAction(
         id(new PHUIListItemView())
             ->setName(pht('Create Sprint'))
-            ->setHref('/conduit/method/sprint.create/')
+            ->setURI('/conduit/method/sprint.create/')
             ->setIcon('fa-calendar')
             ->setDisabled(!$can_create));
 
@@ -98,7 +98,7 @@ abstract class SprintController extends PhabricatorController {
     $crumbs = array();
 
       $crumbs[] = id(new PHUICrumbView())
-          ->setHref($uri)
+          ->setURI($uri)
           ->setAural($sprite)
           ->setIcon($sprite);
 

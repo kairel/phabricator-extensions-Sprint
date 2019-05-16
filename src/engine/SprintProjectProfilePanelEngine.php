@@ -16,28 +16,28 @@ final class SprintProjectProfilePanelEngine
   protected function getBuiltinProfileItems($object) {
     $items = array();
 
-    $items[] = $this->newItem()
+    $items[] = $this->newItemView()
         ->setBuiltinKey(PhabricatorProject::ITEM_PROFILE)
         ->setMenuItemKey(PhabricatorProjectDetailsProfileMenuItem::MENUITEMKEY);
 
-    $items[] = $this->newItem()
+    $items[] = $this->newItemView()
         ->setBuiltinKey(PhabricatorProject::ITEM_POINTS)
         ->setMenuItemKey(PhabricatorProjectPointsProfileMenuItem::MENUITEMKEY);
 
-    $items[] = $this->newItem()
+    $items[] = $this->newItemView()
         ->setBuiltinKey(PhabricatorProject::ITEM_WORKBOARD)
         ->setMenuItemKey(PhabricatorProjectWorkboardProfileMenuItem::MENUITEMKEY);
 
-    $items[] = $this->newItem()
+    $items[] = $this->newItemView()
         ->setBuiltinKey(PhabricatorProject::ITEM_MEMBERS)
         ->setMenuItemKey(PhabricatorProjectMembersProfileMenuItem::MENUITEMKEY);
 
-    $items[] = $this->newItem()
+    $items[] = $this->newItemView()
         ->setBuiltinKey(PhabricatorProject::ITEM_SUBPROJECTS)
         ->setMenuItemKey(
             PhabricatorProjectSubprojectsProfileMenuItem::MENUITEMKEY);
 
-    $items[] = $this->newItem()
+    $items[] = $this->newItemView()
         ->setBuiltinKey(PhabricatorProject::ITEM_MANAGE)
         ->setMenuItemKey(PhabricatorProjectManageProfileMenuItem::MENUITEMKEY);
 

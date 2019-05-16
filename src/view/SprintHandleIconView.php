@@ -9,7 +9,7 @@ final class SprintHandleIconView extends AphrontTagView {
   const HEAD_SMALL = 'phuihead-small';
   const HEAD_MEDIUM = 'phuihead-medium';
 
-  private $href = null;
+  private $uri = null;
   private $image;
   private $text;
   private $headSize = null;
@@ -20,8 +20,8 @@ final class SprintHandleIconView extends AphrontTagView {
   private $iconColor;
   private $iconStyle;
 
-  public function setHref($href) {
-    $this->href = $href;
+  public function setURI($uri) {
+    $this->href = $uri;
     return $this;
   }
 

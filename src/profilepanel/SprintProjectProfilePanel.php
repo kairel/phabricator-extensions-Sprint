@@ -39,7 +39,7 @@ final class SprintProjectProfilePanel
     );
   }
 
-  protected function newNavigationMenuItems(
+  protected function newMenuItemViewList(
       PhabricatorProfilePanelConfiguration $config) {
 
     $project = $config->getProfileObject();
@@ -51,10 +51,10 @@ final class SprintProjectProfilePanel
 
     $name = $this->getDisplayName($config);
     $icon = 'fa-calendar';
-    $href = "/project/sprint/view/{$id}/";
+    $uri = "/project/sprint/view/{$id}/";
 
-    $item = $this->newItem()
-        ->setHref($href)
+    $item = $this->newItemView()
+        ->setURI($uri)
         ->setName($name)
         ->setDisabled(!$has_children)
         ->setIcon($icon);

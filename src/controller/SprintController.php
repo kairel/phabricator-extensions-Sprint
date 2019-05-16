@@ -98,7 +98,7 @@ abstract class SprintController extends PhabricatorController {
     $crumbs = array();
 
       $crumbs[] = id(new PHUICrumbView())
-          ->setURI($uri)
+          ->setHref($uri)
           ->setAural($sprite)
           ->setIcon($sprite);
 

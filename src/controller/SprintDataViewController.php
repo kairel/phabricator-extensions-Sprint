@@ -17,7 +17,7 @@ final class SprintDataViewController extends SprintController {
             ->setViewer($viewer)
             ->setProfileObject($project);
 
-        $view_list->profileMenu = $engine->newNavigationView();
+        $view_list->profileMenu = $engine->newNavigationViewBUM();
       }
     }
     return $this->profileMenu;
